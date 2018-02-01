@@ -25,6 +25,8 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__what_what_component__ = __webpack_require__("../../../../../src/app/what/what.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -34,9 +36,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var routes = [
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */], data: { title: 'Füttr - Homepage' } },
-    { path: '', pathMatch: 'full', redirectTo: 'home' }
+    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: 'what', component: __WEBPACK_IMPORTED_MODULE_3__what_what_component__["a" /* WhatComponent */], data: { title: 'Füttr - Was ist das?' } },
+    { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_4__contact_contact_component__["a" /* ContactComponent */], data: { title: 'Füttr - Kontakt' } }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -57,7 +63,7 @@ var AppRoutingModule = (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-sm navbar-inverse text-nowrap\" style=\"background-color: #191816\">\r\n    <button type=\"button\" class=\"navbar-toggler navbar-toggler-right\" (click)=\"toggleState()\" aria-controls=\"Navbar\" aria-expanded=\"false\"\r\n        aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand logo\" (click)=\"click()\" routerLink=\"/home\">\r\n        <img alt=\"Brand\" class=\"logo-picture\" src=\"favicon.ico\" width=\"48\"> Füttr</a>\r\n\r\n\r\n    <div class=\"collapse navbar-collapse\" [ngClass]=\"{'show': navShow}\" id=\"Navbar\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" routerLink=\"/home\">\r\n                    <img src=\"assets/home.png\"> Home</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" routerLink=\"/feed\">\r\n                    <img src=\"assets/feed.png\"> Fütterung</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" routerLink=\"/position\">\r\n                    <img src=\"assets/control.png\"> Positionen</a>\r\n            </li>\r\n            <li ngbDropdown class=\"nav-item dropdown\" style=\"cursor: pointer\">\r\n                <a class=\"nav-link dropdown-toggle\" ngbDropdownToggle aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                    <img src=\"assets/settings.png\"> Einstellungen</a>\r\n                <div ngbDropdownMenu class=\"dropdown-menu\" aria-labelledby=\"dropdown\">\r\n                    <a class=\"nav-link dropdown-item\" routerLink=\"/info\">\r\n                        <img src=\"assets/info.png\"> Geräteinfo</a>\r\n                    <a class=\"nav-link dropdown-item\" routerLink=\"/update\">\r\n                        <img src=\"assets/update.png\"> Update</a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n<p>\r\n    <br>\r\n</p>\r\n<router-outlet></router-outlet>"
+module.exports = "<nav class=\"navbar navbar-toggleable-sm navbar-inverse text-nowrap\" style=\"background-color: #191816\">\r\n    <button type=\"button\" class=\"navbar-toggler navbar-toggler-right\" (click)=\"toggleState()\" aria-controls=\"Navbar\" aria-expanded=\"false\"\r\n        aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand logo\" (click)=\"click()\" routerLink=\"/home\">\r\n        <img alt=\"Brand\" class=\"logo-picture\" src=\"favicon.ico\" width=\"48\"> Füttr</a>\r\n\r\n\r\n    <div class=\"collapse navbar-collapse\" [ngClass]=\"{'show': navShow}\" id=\"Navbar\">\r\n        <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" (click)=\"toggleState()\" routerLink=\"/home\">Home</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" (click)=\"toggleState()\" routerLink=\"/what\">Was ist Füttr?</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n                <a class=\"nav-link\" (click)=\"toggleState()\" routerLink=\"/contact\">Kontakt</a>\r\n            </li>\r\n            <!-- <li ngbDropdown class=\"nav-item dropdown\" style=\"cursor: pointer\">\r\n                <a class=\"nav-link dropdown-toggle\" ngbDropdownToggle aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                    <img src=\"assets/settings.png\"> Einstellungen</a>\r\n                <div ngbDropdownMenu class=\"dropdown-menu\" aria-labelledby=\"dropdown\">\r\n                    <a class=\"nav-link dropdown-item\" routerLink=\"/info\">\r\n                        <img src=\"assets/info.png\"> Geräteinfo</a>\r\n                    <a class=\"nav-link dropdown-item\" routerLink=\"/update\">\r\n                        <img src=\"assets/update.png\"> Update</a>\r\n                </div>\r\n            </li> -->\r\n        </ul>\r\n    </div>\r\n</nav>\r\n<p>\r\n    <br>\r\n</p>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -144,6 +150,8 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__what_what_component__ = __webpack_require__("../../../../../src/app/what/what.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__contact_contact_component__ = __webpack_require__("../../../../../src/app/contact/contact.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -160,18 +168,81 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_9__home_home_component__["a" /* HomeComponent */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_9__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_10__what_what_component__["a" /* WhatComponent */], __WEBPACK_IMPORTED_MODULE_11__contact_contact_component__["a" /* ContactComponent */]],
             imports: [__WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot(), __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClientModule */], __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* HttpModule */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */]],
             providers: [],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/contact/contact.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/contact/contact.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid\">\n  Kontakt per e-mail:\n  <code>fuettr@gmail.com</code>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/contact/contact.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ContactComponent = (function () {
+    function ContactComponent() {
+    }
+    ContactComponent.prototype.ngOnInit = function () {
+    };
+    ContactComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-contact',
+            template: __webpack_require__("../../../../../src/app/contact/contact.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/contact/contact.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ContactComponent);
+    return ContactComponent;
 }());
 
 
@@ -226,7 +297,6 @@ var HomeComponent = (function () {
         this.app = app;
     }
     HomeComponent.prototype.ngOnInit = function () {
-        this.app.navShow = false;
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -237,6 +307,67 @@ var HomeComponent = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */]])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/what/what.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/what/what.component.html":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "../../../../../src/app/what/what.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WhatComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var WhatComponent = (function () {
+    function WhatComponent() {
+    }
+    WhatComponent.prototype.ngOnInit = function () {
+    };
+    WhatComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-what',
+            template: __webpack_require__("../../../../../src/app/what/what.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/what/what.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], WhatComponent);
+    return WhatComponent;
 }());
 
 
