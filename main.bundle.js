@@ -279,7 +279,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-6\" style=\"border-right: 1px solid\">\r\n            <h3>Übersicht</h3>\r\n        </div>\r\n        <div class=\"col-sm-6\" style=\"border-left: 1px solid\">\r\n            <h3>Neuigkeiten</h3>\r\n            {{test}}\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-6\" style=\"border-right: 1px solid\">\r\n            <h3>Übersicht</h3>\r\n        </div>\r\n        <div class=\"col-sm-6\" style=\"border-left: 1px solid\">\r\n            <h3>Neuigkeiten</h3>\r\n            <iframe src=\"http://sorogon.duckdns.org:2525\">\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
